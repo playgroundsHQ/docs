@@ -67,6 +67,64 @@ html[data-theme='dark'] {
   width: 24px;
 }
 
+.navbar-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80vw;
+  max-width: 320px;
+  height: 100vh;
+  height: 100dvh;
+  background: rgba(10, 10, 26, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 200;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 0;
+}
+
+.navbar-sidebar .navbar-sidebar__brand {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar-sidebar .navbar-sidebar__items {
+  padding: 0.5rem 0;
+}
+
+.navbar-sidebar .menu__link {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  border-radius: 0;
+  transition: background 0.2s ease;
+}
+
+.navbar-sidebar .menu__link:hover {
+  background: rgba(52, 211, 153, 0.08);
+}
+
+.navbar-sidebar .menu__link--active {
+  color: var(--accent);
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.navbar-sidebar__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 199;
+}
+
+.navbar__toggle {
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
 .footer--dark {
   background: rgba(10, 10, 26, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
