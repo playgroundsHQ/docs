@@ -67,7 +67,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Playgrounds.dev',
+        title: '',
         logo: {
           alt: 'Playgrounds.dev',
           src: 'img/logo.png',

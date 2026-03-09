@@ -46,7 +46,7 @@ A **dynamic service** is backed by source code from a [Playzone](/core-concepts/
 | Source code mounting | ❌ No — the service runs from a built Docker image |
 | Browser IDE | ❌ No |
 | Auto-sync (git pull) | ❌ No |
-| Automatic rebuild | ✅ Yes — Playguard triggers a rebuild when new commits are detected |
+| Automatic rebuild | ❌ No — manual re-creation required when new commits land |
 
 See [Advanced Configuration](/services/advanced#production-mode) for details on toggling production mode.
 

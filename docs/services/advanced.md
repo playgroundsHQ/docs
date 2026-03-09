@@ -16,7 +16,7 @@ Dynamic services can be toggled between **Dev mode** (default) and **Production 
 |--------|----------|-----------------|
 | **Source code** | Mounted from Git clone | Not mounted — runs from a built image |
 | **IDE** | code-server sidecar attached | No IDE |
-| **Auto-sync** | git pull on clean branches | No sync — rebuild on new commits |
+| **Auto-sync** | git pull on clean branches | No sync — manual re-creation required |
 | **Image** | Base image from Dockerfile | Fully built image from BuildRecord |
 | **Live reload** | Supported (framework-dependent) | Not applicable |
 
@@ -29,12 +29,16 @@ Dynamic services can be toggled between **Dev mode** (default) and **Production 
 
 ### Build Process
 
-When a service is in Production mode, the platform:
+When a service is in Production mode, the platform builds the Docker image **at Playground creation time** and uses that image for the lifetime of the Playground.
 
-1. Detects new commits on the configured branch
-2. Builds the Docker image using the service's Dockerfile on the Playroom
-3. Stores a `BuildRecord` with the image reference
-4. Uses the latest successful build image when starting the container
+> **Production services do not automatically rebuild when new commits land on the branch.** To pick up new code, the Playground must be manually re-created (destroyed and re-provisioned, or using the Recreate action). This is intentional — production environments are pinned to a known-good image.
+
+The build process at creation time:
+
+1. Clones the configured branch onto the Playroom host
+2. Builds the Docker image using the service's Dockerfile
+3. Stores a `BuildRecord` with the resulting image reference
+4. Uses that image for all containers in the Playground
 
 ## Browser IDE (code-server)
 
