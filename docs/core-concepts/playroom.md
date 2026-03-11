@@ -89,6 +89,4 @@ Before creating a Playroom, your remote server must meet these requirements:
 
 ## Resource Limits
 
-| Limit | Value |
-|-------|-------|
-| Maximum Playrooms per account | **3** |
+Playroom creation is **subscription-based**. Each subscription plan includes a Playroom allowance — for example, a Single plan grants 1 Playroom, while a Multiplayer plan grants up to 10. Multiple subscriptions stack their allowances.

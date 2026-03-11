@@ -191,4 +191,5 @@ Supported agent providers: Gemini, OpenAI Codex, Claude Code, OpenCodex.
 
 | Limit | Value |
 |-------|-------|
-| Maximum Playgrounds per account | **10** |
+| Maximum Playgrounds per account | **1,000** |
+| Maximum Playgrounds per Playroom | **100** |

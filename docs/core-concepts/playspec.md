@@ -131,6 +131,6 @@ When disabled, volumes are destroyed and recreated with each Playground recreati
 
 | Limit | Value |
 |-------|-------|
-| Maximum Playspecs per account | **20** |
+| Maximum Playspecs per account | **1,000** |
 | Maximum mounted files per Playspec | **3** |
 | Maximum file size | **2 MB** per file |

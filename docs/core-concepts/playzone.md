@@ -77,4 +77,4 @@ A Playzone cannot be deleted while it is referenced by any Playspec. You must fi
 
 | Limit | Value |
 |-------|-------|
-| Maximum Playzones per account | **20** |
+| Maximum Playzones per account | **1,000** |
