@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 const SPARKLE_POSITIONS = [
   [12, 8], [88, 15], [25, 82], [70, 90], [5, 45], [95, 55], [50, 5], [45, 92],
 ];
-const SPARKLE_DURATIONS = [2, 2.5, 3, 3.5, 2.2, 2.8, 3.2, 3.8];
+const SPARKLE_DELAYS = [0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1];
+const EXPLODE_COUNT = 12;
 
 export default function AnimatedPhoenixLogo({ size = 28 }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -29,8 +30,7 @@ export default function AnimatedPhoenixLogo({ size = 28 }) {
             style={{
               left: `${left}%`,
               top: `${top}%`,
-              animationDelay: `${i * 0.3}s`,
-              animationDuration: `${SPARKLE_DURATIONS[i]}s`,
+              animationDelay: `${SPARKLE_DELAYS[i]}s`,
             }}
           />
         ))}
@@ -69,6 +69,19 @@ export default function AnimatedPhoenixLogo({ size = 28 }) {
       <div className="phoenix-orbit phoenix-orbit-reverse">
         <div className="phoenix-orbit-dot phoenix-orbit-dot-pink" />
       </div>
+
+      {/* Exploding particles on hover */}
+      {isHovered &&
+        Array.from({ length: EXPLODE_COUNT }, (_, i) => (
+          <div
+            key={i}
+            className="phoenix-explode-particle"
+            style={{
+              transform: `translate(-50%, -50%) rotate(${i * 30}deg) translateY(-${20 + (i % 5) * 5}px)`,
+              animationDelay: `${i * 0.04}s`,
+            }}
+          />
+        ))}
     </div>
   );
 }

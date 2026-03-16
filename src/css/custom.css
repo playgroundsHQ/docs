@@ -64,30 +64,21 @@ html[data-theme='dark'] {
 }
 
 @keyframes ping-slow {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.2); opacity: 0.3; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-
-@keyframes ping-slower {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.3); opacity: 0.2; }
-  100% { transform: scale(1); opacity: 0.6; }
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.25); opacity: 0.2; }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 0.8; transform: scale(1.1); }
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.08); }
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 @keyframes spin-reverse {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
 @keyframes explode {
@@ -95,36 +86,20 @@ html[data-theme='dark'] {
   100% { opacity: 0; transform: translate(-50%, -50%) scale(3); }
 }
 
-@keyframes energy-flow-1 {
-  0% { top: -50%; left: 20%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { top: 150%; left: 80%; opacity: 0; }
-}
-
-@keyframes energy-flow-2 {
-  0% { top: -50%; left: 50%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { top: 150%; left: 50%; opacity: 0; }
-}
-
-@keyframes energy-flow-3 {
-  0% { top: -50%; left: 80%; opacity: 0; }
-  50% { opacity: 1; }
-  100% { top: 150%; left: 20%; opacity: 0; }
+@keyframes energy-flow {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  50%  { opacity: 0.8; }
+  100% { transform: translateY(300%); opacity: 0; }
 }
 
 /* Animation utility classes */
 .animate-float { animation: float 3s ease-in-out infinite; }
 .animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
-.animate-ping-slow { animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite; }
-.animate-ping-slower { animation: ping-slower 4s cubic-bezier(0, 0, 0.2, 1) infinite; }
-.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-.animate-spin-slow { animation: spin-slow 8s linear infinite; }
-.animate-spin-reverse { animation: spin-reverse 6s linear infinite; }
-.animate-explode { animation: explode 0.8s ease-out forwards; }
-.animate-energy-flow-1 { animation: energy-flow-1 3s linear infinite; }
-.animate-energy-flow-2 { animation: energy-flow-2 2.5s linear infinite; animation-delay: 0.5s; }
-.animate-energy-flow-3 { animation: energy-flow-3 3.5s linear infinite; animation-delay: 1s; }
+.animate-ping-slow { animation: ping-slow 4s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 10s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse 8s linear infinite; }
+.animate-explode { animation: explode 0.7s ease-out forwards; }
 
 /* ── Navbar ── */
 
@@ -556,32 +531,169 @@ html[data-theme='dark'] {
   }
 }
 
-/* ═══ Animated Phoenix Logo ═══ */
-.animated-phoenix-logo { position: relative; cursor: pointer; display: inline-block; }
-.phoenix-glow-ring { position: absolute; inset: 0; margin: -0.5rem; border-radius: 9999px; }
-.phoenix-glow-ring-inner { width: 100%; height: 100%; border-radius: 9999px; background: linear-gradient(to right, #ec4899, #8b5cf6, #06b6d4); opacity: 0.4; filter: blur(12px); animation: spin-slow 8s linear infinite, pulse-glow 2s ease-in-out infinite; }
+/* ═══ Animated Phoenix Logo (performance-optimised) ═══
+   All keyframes use only transform & opacity (GPU-composited).
+   Reduced blur radii, slower cadences, will-change hints.
+   ═══════════════════════════════════════════════════════ */
+
+@keyframes phoenix-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes phoenix-spin-ccw {
+  to { transform: rotate(-360deg); }
+}
+@keyframes phoenix-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50%      { opacity: 1; transform: scale(1.5) rotate(180deg); }
+}
+@keyframes phoenix-ping {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.25); opacity: 0.15; }
+}
+@keyframes phoenix-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%      { opacity: 0.7; transform: scale(1.08); }
+}
+@keyframes phoenix-energy {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  50%  { opacity: 0.8; }
+  100% { transform: translateY(300%); opacity: 0; }
+}
+@keyframes phoenix-explode {
+  0%   { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%,-50%) scale(3.5); }
+}
+
+/* Container */
+.animated-phoenix-logo {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Glow ring — single composited layer */
+.phoenix-glow-ring {
+  position: absolute;
+  inset: -0.5rem;
+  border-radius: 9999px;
+  will-change: transform;
+  animation: phoenix-spin 10s linear infinite;
+}
+.phoenix-glow-ring-inner {
+  width: 100%; height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #ec4899, #8b5cf6, #06b6d4);
+  opacity: 0.35;
+  filter: blur(10px);
+}
+
+/* Sparkles — transform+opacity only */
 .phoenix-sparkle-container { position: absolute; inset: -1rem; pointer-events: none; }
-.phoenix-sparkle { position: absolute; width: 4px; height: 4px; background: #fde047; border-radius: 9999px; box-shadow: 0 0 10px 2px rgba(253,224,71,0.8); animation: sparkle 2s ease-in-out infinite; }
-.phoenix-ping-ring { position: absolute; inset: 0; margin: -0.25rem; }
-.phoenix-ping-ring-inner { width: 100%; height: 100%; border-radius: 9999px; border: 2px solid; }
-.phoenix-ping-slow { border-color: rgba(167,139,250,0.3); animation: ping-slow 3s cubic-bezier(0,0,0.2,1) infinite; }
-.phoenix-ping-slower { border-color: rgba(244,114,182,0.3); animation: ping-slower 4s cubic-bezier(0,0,0.2,1) infinite; }
+.phoenix-sparkle {
+  position: absolute;
+  width: 3px; height: 3px;
+  background: #fde047;
+  border-radius: 9999px;
+  box-shadow: 0 0 6px 1px rgba(253,224,71,0.6);
+  will-change: transform, opacity;
+  animation: phoenix-sparkle 3s ease-in-out infinite;
+}
+
+/* Ping ripples — lighter borders, gentler scale */
+.phoenix-ping-ring { position: absolute; inset: -0.25rem; }
+.phoenix-ping-ring-inner {
+  width: 100%; height: 100%;
+  border-radius: 9999px;
+  border: 1.5px solid;
+  will-change: transform, opacity;
+}
+.phoenix-ping-slow  { border-color: rgba(167,139,250,0.25); animation: phoenix-ping 4s ease-in-out infinite; }
+.phoenix-ping-slower { border-color: rgba(244,114,182,0.2); animation: phoenix-ping 5.5s ease-in-out infinite 1s; }
+
+/* Logo image */
 .phoenix-logo-image { position: relative; z-index: 10; }
-.phoenix-logo-img { width: 100%; height: 100%; object-fit: contain; transition: all 0.5s ease-out; filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 15px rgba(168,85,247,0.8)); }
-.phoenix-logo-hovered { transform: scale(1.25) rotate(12deg); filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 25px rgba(236,72,153,1)); }
-.phoenix-radial-glow { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: -1; pointer-events: none; }
-.phoenix-radial-glow::after { content: ''; width: 75%; height: 75%; border-radius: 9999px; filter: blur(16px); background: radial-gradient(circle, rgba(139,92,246,0.5) 0%, rgba(236,72,153,0.3) 40%, transparent 70%); animation: pulse-glow 2s ease-in-out infinite; }
-.phoenix-energy-container { position: absolute; inset: 0; overflow: hidden; border-radius: 9999px; pointer-events: none; }
-.phoenix-energy-line { position: absolute; width: 4px; height: 48px; filter: blur(4px); }
-.phoenix-energy-1 { background: linear-gradient(to bottom, #22d3ee, transparent); animation: energy-flow-1 3s linear infinite; }
-.phoenix-energy-2 { background: linear-gradient(to bottom, #f472b6, transparent); animation: energy-flow-2 2.5s linear infinite; animation-delay: 0.5s; }
-.phoenix-energy-3 { background: linear-gradient(to bottom, #facc15, transparent); animation: energy-flow-3 3.5s linear infinite; animation-delay: 1s; }
-.phoenix-orbit { position: absolute; inset: 0; pointer-events: none; }
-.phoenix-orbit-forward { animation: spin-slow 8s linear infinite; }
-.phoenix-orbit-reverse { animation: spin-reverse 6s linear infinite; }
-.phoenix-orbit-dot { position: absolute; width: 6px; height: 6px; border-radius: 9999px; animation: pulse-glow 2s ease-in-out infinite; }
-.phoenix-orbit-dot-cyan { top: 0; left: 50%; margin-left: -3px; background: #22d3ee; box-shadow: 0 0 10px 2px rgba(34,211,238,0.8); }
-.phoenix-orbit-dot-pink { bottom: 0; left: 50%; margin-left: -3px; background: #f472b6; box-shadow: 0 0 10px 2px rgba(236,72,153,0.8); animation-delay: 0.5s; }
+.phoenix-logo-img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease-out, filter 0.5s ease-out;
+  filter: brightness(1.1) saturate(1.2) drop-shadow(0 0 10px rgba(168,85,247,0.6));
+}
+.phoenix-logo-hovered {
+  transform: scale(1.2) rotate(12deg);
+  filter: brightness(1.15) saturate(1.3) drop-shadow(0 0 20px rgba(236,72,153,0.9));
+}
+
+/* Radial glow — reduced blur radius */
+.phoenix-radial-glow {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  z-index: -1; pointer-events: none;
+}
+.phoenix-radial-glow::after {
+  content: '';
+  width: 70%; height: 70%;
+  border-radius: 9999px;
+  filter: blur(12px);
+  background: radial-gradient(circle, rgba(139,92,246,0.4) 0%, rgba(236,72,153,0.2) 50%, transparent 75%);
+  will-change: opacity, transform;
+  animation: phoenix-pulse 3s ease-in-out infinite;
+}
+
+/* Energy flows — GPU via translateY instead of top/left */
+.phoenix-energy-container {
+  position: absolute; inset: 0;
+  overflow: hidden; border-radius: 9999px;
+  pointer-events: none;
+}
+.phoenix-energy-line {
+  position: absolute;
+  width: 3px; height: 40px;
+  filter: blur(3px);
+  will-change: transform, opacity;
+}
+.phoenix-energy-1 { left: 20%; background: linear-gradient(to bottom, #22d3ee, transparent); animation: phoenix-energy 3.5s linear infinite; }
+.phoenix-energy-2 { left: 50%; background: linear-gradient(to bottom, #f472b6, transparent); animation: phoenix-energy 3s linear infinite 0.7s; }
+.phoenix-energy-3 { left: 80%; background: linear-gradient(to bottom, #facc15, transparent); animation: phoenix-energy 4s linear infinite 1.4s; }
+
+/* Orbiting dots */
+.phoenix-orbit { position: absolute; inset: 0; pointer-events: none; will-change: transform; }
+.phoenix-orbit-forward { animation: phoenix-spin 10s linear infinite; }
+.phoenix-orbit-reverse { animation: phoenix-spin-ccw 8s linear infinite; }
+.phoenix-orbit-dot {
+  position: absolute;
+  width: 5px; height: 5px;
+  border-radius: 9999px;
+  will-change: opacity, transform;
+  animation: phoenix-pulse 3s ease-in-out infinite;
+}
+.phoenix-orbit-dot-cyan { top: 0; left: 50%; margin-left: -2.5px; background: #22d3ee; box-shadow: 0 0 8px 1px rgba(34,211,238,0.6); }
+.phoenix-orbit-dot-pink { bottom: 0; left: 50%; margin-left: -2.5px; background: #f472b6; box-shadow: 0 0 8px 1px rgba(236,72,153,0.6); animation-delay: 0.5s; }
+
+/* Exploding particles on hover */
+.phoenix-explode-particle {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 3px; height: 3px;
+  background: white;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px 2px rgba(255,255,255,0.7);
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: phoenix-explode 0.7s ease-out forwards;
+}
+
+/* Accessibility: respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .phoenix-glow-ring,
+  .phoenix-sparkle,
+  .phoenix-ping-ring-inner,
+  .phoenix-radial-glow::after,
+  .phoenix-energy-line,
+  .phoenix-orbit,
+  .phoenix-orbit-dot,
+  .phoenix-explode-particle { animation: none !important; }
+  .phoenix-logo-img { transition: none !important; }
+}
 
 /* Navbar logo padding */
 .navbar__brand { padding-left: 0.5rem; }
