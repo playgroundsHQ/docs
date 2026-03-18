@@ -151,6 +151,44 @@ All standard [API authentication](/api/overview) rules apply. An API key without
 | `upload_template_image` | `import_templates:write` | Upload a cover image for a template |
 | `fork_template` | `import_templates:write` | Fork a public template into your account |
 
+### Agent Data (Artefacts, Feedbacks, Mutters)
+
+| Tool | Required Scope | Description |
+|------|-------|-------------|
+| `list_artefacts` | `agents:read` | List artefacts with optional filters |
+| `get_artefact` | `agents:read` | Get artefact details |
+| `upload_artefact` | `agents:write` | Upload a file as an artefact |
+| `download_artefact` | `agents:read` | Download an artefact file |
+| `list_feedbacks` | `agents:read` | List feedbacks with optional filters |
+| `get_feedback` | `agents:read` | Get feedback details |
+| `create_feedback` | `agents:write` | Create a new feedback entry |
+| `update_feedback` | `agents:write` | Update feedback content |
+| `delete_feedback` | `agents:delete` | Delete a feedback entry |
+| `list_agent_mutters` | `agents:read` | List agent mutters with optional filters |
+| `get_agent_mutter` | `agents:read` | Get mutter details |
+| `create_agent_mutter` | `agents:write` | Create a new mutter |
+
+**Advanced Filtering:** The `list_artefacts`, `list_feedbacks`, and `list_agent_mutters` tools all support:
+
+| Parameter | Description |
+|-----------|-------------|
+| `query` | Text search across name/content |
+| `playground_id` | Filter by originating workspace |
+| `sort` | Sort field (e.g., `created_at`, `updated_at`) |
+| `sort_direction` | `asc` or `desc` |
+| `limit` | Max results to return |
+
+### Webhooks
+
+| Tool | Required Scope | Description |
+|------|-------|-------------|
+| `list_webhook_endpoints` | `webhooks:read` | List all webhook endpoints |
+| `create_webhook_endpoint` | `webhooks:write` | Create a new endpoint |
+| `update_webhook_endpoint` | `webhooks:write` | Update an endpoint |
+| `delete_webhook_endpoint` | `webhooks:delete` | Delete an endpoint |
+| `list_webhook_deliveries` | `webhooks:read` | View delivery history |
+| `test_webhook_endpoint` | `webhooks:write` | Send a test event |
+
 :::info Destructive Tools
 Tools marked with ⚠️ have `destructiveHint: true`. Well-behaved AI clients will ask for confirmation before executing them.
 :::

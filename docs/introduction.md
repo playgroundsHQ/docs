@@ -7,7 +7,7 @@ description: Welcome to Playgrounds.dev — instant cloud development environmen
 
 # Welcome to Playgrounds.dev
 
-Playgrounds.dev gives your team **instant, isolated full-stack cloud environments** powered by Docker Compose. Connect your GitHub repository, define your stack, and launch a live environment — complete with browser-based IDE, unique subdomains, and automatic HTTPS — in seconds.
+Playgrounds.dev gives your team **instant, isolated full-stack cloud environments** powered by Docker Compose. Connect your GitHub repository, define your stack, and launch a live environment — complete with unique subdomains and automatic HTTPS — in seconds.
 
 ## How It Works
 
@@ -28,17 +28,16 @@ Playroom → Playzone → Playspec → Playground
 ## What You Can Do
 
 - **Launch environments instantly** — Spin up complete stacks from a Docker Compose file or a template
-- **Edit code in the browser** — Every dynamic service gets a browser-based VS Code IDE
-- **Web SSH Terminal** — Access your environments directly via a fully-featured browser terminal
+- **SSH into live environments** — Connect directly to your running containers via Web SSH terminal
 - **Share live previews** — Every service gets a unique HTTPS subdomain
 - **Mix Dev and Production modes** — Mount source code for some services, use built images for others
+- **Run headless tasks** — Use Job Mode to run ephemeral pipelines, test suites, or migrations
 - **Automate with the API** — Full REST API with scoped API keys for CI/CD integration
 - **Connect AI agents via MCP** — Use the built-in MCP server to allow any MCP-compatible AI agent to manage your environments
 - **Integrate Custom Agents** — Store generic provider credentials and deploy AI agents alongside your services with Custom MCP support
-- **Agent Features** — Leverage Agent Artefacts (file uploads) and real-time Agent Activity tracking
+- **Agent Features** — Leverage Agent Artefacts (file uploads), Mounted Files, and real-time Agent Activity tracking
 - **Manage GitHub repos** — Create repositories and push files via the Repositories API
-- **Track everything** — Audit Logs record every Playground lifecycle event for debugging and accountability
-- **Publish reusable templates** — Share environment blueprints via Stargate or your own fleet
+- **Control access** — Scoped API Keys and Webhook events for secure integrations
 - **Track everything** — Audit Logs record every Playground lifecycle event for debugging and accountability
 - **Publish reusable templates** — Share environment blueprints via Stargate or your own fleet
 
@@ -49,9 +48,12 @@ Playroom → Playzone → Playspec → Playground
 | Launch my first environment | [Launch](/launch) |
 | Browse pre-built templates | [Stargate](/launch/stargate) |
 | Understand core concepts | [Core Concepts](/core-concepts/playroom) |
+| Run a headless task | [Job Mode](/core-concepts/job-mode) |
 | Configure services | [Services](/services/overview) |
 | Use the REST API | [API Reference](/api/overview) |
 | Connect an AI agent via MCP | [MCP Server](/mcp/overview) |
 | Use AI agents with my own credentials | [Agents](/agents/overview) |
+| Attach files to an agent | [Agent Mounted Files](/agents/mounted-files) |
 | Create a reusable template | [Templates](/launch/templates) |
+| Manage API Keys and Webhooks | [Security & Access](/core-concepts/security) |
 | View Playground event history | [Audit Logs](/core-concepts/audit-logs) |

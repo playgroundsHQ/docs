@@ -11,7 +11,10 @@ const sidebars = {
         'core-concepts/playzone',
         'core-concepts/playspec',
         'core-concepts/playground',
+        'core-concepts/job-mode',
         'core-concepts/audit-logs',
+        'core-concepts/security',
+        'core-concepts/onboarding-wizard',
       ],
     },
     {
@@ -23,6 +26,7 @@ const sidebars = {
         'agents/authentication',
         'agents/playground-integration',
         'agents/artefacts-and-activity',
+        'agents/mounted-files',
       ],
     },
     {
@@ -64,6 +68,7 @@ const sidebars = {
         'api/repositories',
         'api/launch',
         'api/templates',
+        'api/webhooks',
       ],
     },
   ],

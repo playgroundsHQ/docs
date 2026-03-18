@@ -31,6 +31,25 @@ Agents in Playgrounds.dev are highly configurable. Using the **Agent Configurati
 Every agent comes with a dedicated **Persistent Volume** mounted at `/app/data`. This ensures that any files, models, or configurations the agent downloads or generates persist across restarts and across different Playgrounds where the agent is attached.
 
 
+## Model Options
+
+Each agent can have **per-agent model options** — a free-form text field that controls provider-specific parameters like model name, context window size, or temperature. The resolution order is:
+
+1. **Per-agent `model_options`** (set on the agent detail card or via the API)
+2. **Global admin setting** per provider (configurable in Admin → Settings)
+3. **Built-in platform defaults** per provider
+
+This allows you to override the default model for a specific agent without affecting other agents using the same provider.
+
+```bash
+PATCH /api/agents/:id
+{
+  "agent": {
+    "model_options": "model=claude-sonnet-4-20250514,context_window=200000"
+  }
+}
+```
+
 ## Creating an Agent
 
 1. Navigate to **Agents** in the sidebar

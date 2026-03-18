@@ -18,6 +18,7 @@ Manage [Playgrounds](/core-concepts/playground) — live, running instances of y
 | `POST` | `/api/playgrounds` | `playgrounds:write` | Create a new Playground |
 | `DELETE` | `/api/playgrounds/:id` | `playgrounds:delete` | Destroy a Playground |
 | `POST` | `/api/playgrounds/:id/recreate` | `playgrounds:write` | Recreate a Playground |
+| `POST` | `/api/playgrounds/:id/restart` | `playgrounds:write` | Restart a Playground (in-place) |
 | `POST` | `/api/playgrounds/:id/extend_expiration` | `playgrounds:write` | Extend the TTL |
 | `GET` | `/api/playgrounds/:id/compose` | `playgrounds:read` | Get the generated Compose YAML |
 | `GET` | `/api/playgrounds/:id/logs/:service` | `playgrounds:read` | Get service logs |
@@ -185,6 +186,25 @@ POST /api/playgrounds/:id/recreate
 ```
 
 Destroys containers and re-runs the full provisioning pipeline. Preserves volumes if the Playspec has `persist_volumes` enabled.
+
+---
+
+### Restart Playground
+
+```bash
+POST /api/playgrounds/:id/restart
+```
+
+Performs an in-place restart of the Playground's containers without destroying the environment. The platform pre-pulls and pre-builds all required Docker images **before** bringing containers down, minimizing downtime. Returns `202 Accepted`.
+
+**Restart vs Recreate:**
+
+| | Restart | Recreate |
+|---|---|---|
+| Downtime | Minimal (pre-pull first) | Full reprovision cycle |
+| Volumes | Always preserved | Preserved only if `persist_volumes` enabled |
+| Config changes | Not applied | Applied |
+| Use case | Recover stuck services | Apply spec changes |
 
 ---
 

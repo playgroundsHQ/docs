@@ -44,6 +44,7 @@ You can interact directly with your agent's output and reasoning using the **Fee
 - **Multi-type Uploads:** Support for multiple file types, automatically categorized with relevant attachment icons.
 - **Dynamic File Explorer:** View an organized file tree of all the artefacts the agent has generated, downloaded, or that you have provided.
 - **Storage:** Artefacts can be up to 10MB each and are safely isolated within the agent's running context.
+- **Playground Association:** Each artefact, feedback, and mutter can be associated with a specific `playground_id`, indicating which workspace it originated from. Use `?playground_id=ID` when listing via the API to filter by workspace.
 
 ## Logs and Debugging
 

@@ -6,7 +6,7 @@ description: A Playzone is a connected GitHub repository that provides source co
 
 # Playzone
 
-A **Playzone** is a connected GitHub repository. It provides source code that gets mounted into your dynamic services, enabling live editing through the browser-based IDE.
+A **Playzone** is a connected GitHub repository. It provides source code that gets mounted into your dynamic services, enabling live editing via your local editor or SSH.
 
 ## Overview
 

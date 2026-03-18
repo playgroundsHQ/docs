@@ -46,7 +46,7 @@ Events are organized into categories:
 | Player triggered recreation | You recreated a running Playground |
 | Player extended expiration | You extended the TTL |
 | Player retried creation | You retried a failed creation |
-| Player committed changes | You committed code via the browser IDE |
+| Player committed changes | You committed code to a Playground's working directory |
 
 ### Creation Lifecycle
 
