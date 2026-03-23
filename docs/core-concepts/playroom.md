@@ -71,7 +71,7 @@ A Playroom can have one or more domains. The **first domain** in the list is the
 For example, if your root domain is `dev.example.com`, a service with subdomain `web` would be accessible at `https://web.dev.example.com`.
 
 :::tip Free Domain
-If your Playroom was provisioned through a subscription plan, it may include a free `*.playgrounds.dev` subdomain automatically.
+If your Playroom was provisioned through a subscription plan, it may include a free `*.fibe.gg` subdomain automatically.
 :::
 
 ## Host Requirements

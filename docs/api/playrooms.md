@@ -132,7 +132,7 @@ Generates a new ed25519 key pair. Returns the public key:
 
 ```json
 {
-  "public_key": "ssh-ed25519 AAAA... playroom-1@playgrounds.dev"
+  "public_key": "ssh-ed25519 AAAA... playroom-1@fibe.gg"
 }
 ```
 

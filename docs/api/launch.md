@@ -81,7 +81,7 @@ This makes it ideal for:
 ## Example: CI/CD Preview Environment
 
 ```bash
-curl -X POST https://my.playgrounds.dev/api/launch \
+curl -X POST https://my.fibe.gg/api/launch \
   -H "Authorization: Bearer $PLAYGROUNDS_API_KEY" \
   -H "Content-Type: application/json" \
   -d "{

@@ -36,7 +36,7 @@ Cover images are displayed in the template gallery (Stargate and My Fleet). Supp
 
 ### Categories
 
-Templates can be organized into categories (e.g., Web Frameworks, Databases, Full-Stack Starters). Categories are managed by platform administrators — to request a new category, contact **support@playgrounds.dev**.
+Templates can be organized into categories (e.g., Web Frameworks, Databases, Full-Stack Starters). Categories are managed by platform administrators — to request a new category, contact **support@fibe.gg**.
 
 Categories help users discover relevant templates in [Stargate](/launch/stargate).
 

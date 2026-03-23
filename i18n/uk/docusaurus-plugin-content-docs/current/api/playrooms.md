@@ -132,7 +132,7 @@ POST /api/playrooms/:id/generate_ssh_key
 
 ```json
 {
-  "public_key": "ssh-ed25519 AAAA... playroom-1@playgrounds.dev"
+  "public_key": "ssh-ed25519 AAAA... playroom-1@fibe.gg"
 }
 ```
 

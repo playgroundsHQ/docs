@@ -47,7 +47,7 @@ GET /api/import_templates/search?query=rails
 
 Категорії шаблонів керуються адміністраторами платформи. Ви можете **переглядати** всі доступні категорії для використання при створенні або пошуку шаблонів, але не можете створювати, оновлювати або видаляти категорії через API.
 
-Для запиту нової категорії зверніться на **support@playgrounds.dev**.
+Для запиту нової категорії зверніться на **support@fibe.gg**.
 
 ```bash
 GET /api/template_categories
@@ -99,7 +99,7 @@ POST /api/import_templates/:id/create_version
 
 ```json
 {
-  "template_body": "playgrounds.dev:\n  variables:\n    app_name:\n      name: \"Application Name\"\n      validation: \"/^[a-z][a-z0-9-]{2,30}$/\"\n\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      APP_NAME: $$var__app_name\n  db:\n    image: postgres:16",
+  "template_body": "fibe.gg:\n  variables:\n    app_name:\n      name: \"Application Name\"\n      validation: \"/^[a-z][a-z0-9-]{2,30}$/\"\n\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      APP_NAME: $$var__app_name\n  db:\n    image: postgres:16",
   "public": true
 }
 ```
@@ -107,7 +107,7 @@ POST /api/import_templates/:id/create_version
 Версії **незмінні** — після створення `template_body` не може бути змінене. Номер версії присвоюється автоматично послідовно.
 
 :::note Валідація змінних
-Платформа перевіряє, що всі посилання `$$var__NAME` та `$$random__NAME` у тілі шаблону оголошені в секції `playgrounds.dev > variables`, і навпаки. Неоголошені або невикористані змінні спричинять помилку валідації.
+Платформа перевіряє, що всі посилання `$$var__NAME` та `$$random__NAME` у тілі шаблону оголошені в секції `fibe.gg > variables`, і навпаки. Неоголошені або невикористані змінні спричинять помилку валідації.
 :::
 
 ---

@@ -47,7 +47,7 @@ Full-text search across template names and descriptions. Returns up to 10 result
 
 Template categories are managed by platform administrators. You can **list** all available categories to use during template creation or search, but you cannot create, update, or delete categories through the API.
 
-To request a new category, contact **support@playgrounds.dev**.
+To request a new category, contact **support@fibe.gg**.
 
 ```bash
 GET /api/template_categories
@@ -99,7 +99,7 @@ POST /api/import_templates/:id/create_version
 
 ```json
 {
-  "template_body": "playgrounds.dev:\n  variables:\n    app_name:\n      name: \"Application Name\"\n      validation: \"/^[a-z][a-z0-9-]{2,30}$/\"\n\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      APP_NAME: $$var__app_name\n  db:\n    image: postgres:16",
+  "template_body": "fibe.gg:\n  variables:\n    app_name:\n      name: \"Application Name\"\n      validation: \"/^[a-z][a-z0-9-]{2,30}$/\"\n\nservices:\n  web:\n    build: .\n    ports:\n      - \"3000:3000\"\n    environment:\n      APP_NAME: $$var__app_name\n  db:\n    image: postgres:16",
   "public": true
 }
 ```
@@ -107,7 +107,7 @@ POST /api/import_templates/:id/create_version
 Versions are **immutable** — once created, the `template_body` cannot be changed. The version number is auto-assigned sequentially.
 
 :::note Variable Validation
-The platform validates that all `$$var__NAME` and `$$random__NAME` references in the template body are declared in the `playgrounds.dev > variables` section, and vice versa. Undeclared or unused variables will cause a validation error.
+The platform validates that all `$$var__NAME` and `$$random__NAME` references in the template body are declared in the `fibe.gg > variables` section, and vice versa. Undeclared or unused variables will cause a validation error.
 :::
 
 ---

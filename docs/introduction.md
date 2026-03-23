@@ -33,6 +33,7 @@ Playroom → Playzone → Playspec → Playground
 - **Mix Dev and Production modes** — Mount source code for some services, use built images for others
 - **Run headless tasks** — Use Job Mode to run ephemeral pipelines, test suites, or migrations
 - **Automate with the API** — Full REST API with scoped API keys for CI/CD integration
+- **Run automated AI repair jobs** — Use Playspec CI-Job and Muti-Job to automatically test and fix code with an AI Agent
 - **Connect AI agents via MCP** — Use the built-in MCP server to allow any MCP-compatible AI agent to manage your environments
 - **Integrate Custom Agents** — Store generic provider credentials and deploy AI agents alongside your services with Custom MCP support
 - **Agent Features** — Leverage Agent Artefacts (file uploads), Mounted Files, and real-time Agent Activity tracking
@@ -49,6 +50,7 @@ Playroom → Playzone → Playspec → Playground
 | Browse pre-built templates | [Stargate](/launch/stargate) |
 | Understand core concepts | [Core Concepts](/core-concepts/playroom) |
 | Run a headless task | [Job Mode](/core-concepts/job-mode) |
+| Run automated AI repair jobs | [Automated Jobs](/core-concepts/automated-jobs) |
 | Configure services | [Services](/services/overview) |
 | Use the REST API | [API Reference](/api/overview) |
 | Connect an AI agent via MCP | [MCP Server](/mcp/overview) |

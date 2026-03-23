@@ -31,7 +31,7 @@ Paste or load a `docker-compose.yml` file directly. The platform parses it, pres
 You can also launch environments programmatically through the [Launch API endpoint](/api/launch):
 
 ```bash
-curl -X POST https://my.playgrounds.dev/api/launch \
+curl -X POST https://my.fibe.gg/api/launch \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

@@ -113,9 +113,9 @@ function Footer() {
                 <div className="footer__bottom text--center">
                     <SocialIcons />
                     <div className="footer-legal-links">
-                        <a href="https://playgrounds.dev/terms">Terms of Service</a>
+                        <a href="https://fibe.gg/terms">Terms of Service</a>
                         <span className="footer-legal-separator">·</span>
-                        <a href="https://playgrounds.dev/privacy">Privacy Policy</a>
+                        <a href="https://fibe.gg/privacy">Privacy Policy</a>
                     </div>
                     {copyright && (
                         <FooterCopyright copyright={copyright} />

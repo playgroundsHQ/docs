@@ -13,12 +13,12 @@ Templates are reusable, versioned environment blueprints written in YAML. They d
 A template body is a standard YAML document with two parts:
 
 1. **Docker Compose definition** — The `services`, `volumes`, `networks`, etc.
-2. **Variable declarations** — A `playgrounds.dev` section with a nested `variables` block that declares all variables used in the template
+2. **Variable declarations** — A `fibe.gg` section with a nested `variables` block that declares all variables used in the template
 
 ### Example
 
 ```yaml
-playgrounds.dev:
+fibe.gg:
   variables:
     project_name:
       name: "Project Name"
@@ -55,7 +55,7 @@ Template variables are placeholders in the format `$$var__NAME` or `$$random__NA
 
 ### Variable Declarations
 
-Every variable referenced in the template body **must** be declared in the `playgrounds.dev > variables` section, and every declared variable **must** be referenced at least once. The platform validates this consistency when creating a version.
+Every variable referenced in the template body **must** be declared in the `fibe.gg > variables` section, and every declared variable **must** be referenced at least once. The platform validates this consistency when creating a version.
 
 Each variable declaration supports:
 
@@ -69,7 +69,7 @@ Each variable declaration supports:
 When a `validation` regex is specified, the launch form enforces it client-side. For example:
 
 ```yaml
-playgrounds.dev:
+fibe.gg:
   variables:
     app_name:
       name: "Application Name"

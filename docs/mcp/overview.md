@@ -43,7 +43,7 @@ Add the following to your MCP client configuration:
 {
   "mcpServers": {
     "playgrounds-dev": {
-      "url": "https://my.playgrounds.dev/mcp",
+      "url": "https://my.fibe.gg/mcp",
       "headers": {
         "Authorization": "Bearer YOUR_API_KEY_TOKEN"
       }
@@ -219,4 +219,4 @@ You can test the MCP server locally using the [MCP Inspector](https://github.com
 npx @anthropic-ai/mcp-inspector
 ```
 
-Configure with your instance URL (e.g., `https://my.playgrounds.dev/mcp`) and Bearer token.
+Configure with your instance URL (e.g., `https://my.fibe.gg/mcp`) and Bearer token.

@@ -8,8 +8,10 @@ description: Store your personal AI provider credentials and use them across Pla
 
 Stored Agents let you **permanently register customized AI provider credentials and configurations** directly in Playgrounds.dev. Once stored, you can:
 
+- **Bridge Hub:** Access all your agents and chats from a single, unified interface.
 - **Attach** them to any [Playground](/core-concepts/playground), injecting your configuration into the agent sidecar automatically
 - **Spin up a general-purpose AI chat** on any of your [Playrooms](/core-concepts/playroom) with a single click — no Playground required
+- **Agent Mutters:** View the internal reasoning and "thoughts" of your agents directly in the UI.
 - **Re-use** them across multiple Playgrounds and chat sessions without configuration overhead
 
 ## Customizing Agents
