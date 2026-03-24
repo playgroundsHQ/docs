@@ -6,7 +6,7 @@ description: Monitor agent thinking processes and manage file attachments.
 
 # Artefacts & Activity
 
-Playgrounds.dev introduces powerful new ways to interact with and monitor your AI Agents during their operation, ensuring transparency and providing seamless file management.
+fibe.gg introduces powerful new ways to interact with and monitor your AI Agents during their operation, ensuring transparency and providing seamless file management.
 
 ## Agent Activity
 
@@ -48,6 +48,6 @@ You can interact directly with your agent's output and reasoning using the **Fee
 
 ## Logs and Debugging
 
-For deeper technical inspection, Playgrounds.dev provides comprehensive **Agent Logs** and **Audit Logs**.
+For deeper technical inspection, fibe.gg provides comprehensive **Agent Logs** and **Audit Logs**.
 - **Agent Logs:** Display real-time standard output and standard error from the agent sidecar container.
 - **Playground Audit Logs:** Track all major lifecycle events for the environment to keep an accountable history of creations, updates, and Agent interactions.

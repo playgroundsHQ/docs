@@ -6,7 +6,7 @@ description: Understanding platform rate limits and how to manage them.
 
 # Rate Limiting
 
-To ensure platform stability and fair resource usage, Playgrounds.dev implements comprehensive rate limiting powered by **Rack Attack**.
+To ensure platform stability and fair resource usage, fibe.gg implements comprehensive rate limiting powered by **Rack Attack**.
 
 ## Global Limits
 

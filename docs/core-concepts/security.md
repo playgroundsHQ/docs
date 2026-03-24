@@ -1,12 +1,12 @@
 ---
 sidebar_position: 5
 title: Security & Access
-description: Manage API keys, webhooks, and access controls for your Playgrounds.dev account.
+description: Manage API keys, webhooks, and access controls for your fibe.gg account.
 ---
 
 # Security & Access
 
-Playgrounds.dev gives you granular control over how external tools and services interact with your account through **API Keys** and **Webhooks**.
+fibe.gg gives you granular control over how external tools and services interact with your account through **API Keys** and **Webhooks**.
 
 ---
 
@@ -23,7 +23,7 @@ API Keys let you authenticate programmatically — for CI/CD pipelines, the MCP 
 5. Copy your key — it will only be shown once
 
 :::caution
-Store your key securely. Playgrounds.dev only shows the full token at creation time.
+Store your key securely. fibe.gg only shows the full token at creation time.
 :::
 
 ### Scopes
@@ -63,7 +63,7 @@ API keys are scoped — they only grant access to what you explicitly allow:
 
 ## Webhooks
 
-Webhooks let external services receive real-time notifications when things happen in Playgrounds.dev.
+Webhooks let external services receive real-time notifications when things happen in fibe.gg.
 
 ### Supported Events
 
@@ -108,7 +108,7 @@ All webhook events are delivered as HTTP POST requests:
 
 ### Verifying Signatures
 
-If you set a secret, Playgrounds.dev signs each request with an `X-Playground-Signature` header:
+If you set a secret, fibe.gg signs each request with an `X-Playground-Signature` header:
 
 ```
 X-Playground-Signature: sha256=abc123...

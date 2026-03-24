@@ -1,12 +1,12 @@
 ---
 sidebar_position: 9
 title: Automated Jobs (CI & Muti)
-description: Learn how Playgrounds.dev automates code repair and mutation testing using AI Agents.
+description: Learn how fibe.gg automates code repair and mutation testing using AI Agents.
 ---
 
 # Automated Jobs (CI & Muti)
 
-Playgrounds.dev goes beyond simple environments by introducing **Automated AI Repair Jobs**. Using your [Stored Agents](/agents/overview) and the [Job Mode](/core-concepts/job-mode) infrastructure, you can configure Playspecs to automatically spawn environments that detect, analyze, and fix code issues.
+fibe.gg goes beyond simple environments by introducing **Automated AI Repair Jobs**. Using your [Stored Agents](/agents/overview) and the [Job Mode](/core-concepts/job-mode) infrastructure, you can configure Playspecs to automatically spawn environments that detect, analyze, and fix code issues.
 
 There are two primary automated job modes available: **Playspec CI-Job** and **Playspec Muti-Job**.
 

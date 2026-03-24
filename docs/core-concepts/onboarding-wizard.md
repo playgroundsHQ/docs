@@ -6,7 +6,7 @@ description: A step-by-step guide to setting up your first Playgrounds environme
 
 # Onboarding Wizard
 
-The **Onboarding Wizard** is designed to help new players get started with Playgrounds.dev quickly and easily. It guides you through the essential steps of configuring your first remote host and environment.
+The **Onboarding Wizard** is designed to help new players get started with fibe.gg quickly and easily. It guides you through the essential steps of configuring your first remote host and environment.
 
 ## The Wizard Flow
 

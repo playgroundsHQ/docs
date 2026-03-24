@@ -13,7 +13,7 @@ A **Playzone** is a connected GitHub repository. It provides source code that ge
 When you create a Playzone, you link a GitHub repository to the platform. The system indexes branches, detects Docker Compose files, and makes the repository available for use in [Playspecs](/core-concepts/playspec).
 
 :::info GitHub Only
-Playgrounds.dev currently supports **GitHub** repositories only. Support for other Git providers is planned for the future.
+fibe.gg currently supports **GitHub** repositories only. Support for other Git providers is planned for the future.
 :::
 
 ## Configuration
@@ -28,7 +28,7 @@ Playgrounds.dev currently supports **GitHub** repositories only. Support for oth
 
 ## GitHub App Integration
 
-The recommended way to connect repositories is through the **Playgrounds.dev GitHub App**. Once installed on your GitHub organization or personal account, the app provides:
+The recommended way to connect repositories is through the **fibe.gg GitHub App**. Once installed on your GitHub organization or personal account, the app provides:
 
 - **Automatic authentication** — No need to manage Personal Access Tokens
 - **Repository discovery** — Browse and attach repositories directly from the UI

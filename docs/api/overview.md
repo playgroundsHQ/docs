@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
 title: Overview
-description: Getting started with the Playgrounds.dev REST API — authentication, scopes, and error handling.
+description: Getting started with the fibe.gg REST API — authentication, scopes, and error handling.
 ---
 
 # API Overview
 
-The Playgrounds.dev API is a RESTful JSON API that provides programmatic access to all platform resources. Use it to automate environment provisioning, integrate with CI/CD pipelines, or build custom tooling.
+The fibe.gg API is a RESTful JSON API that provides programmatic access to all platform resources. Use it to automate environment provisioning, integrate with CI/CD pipelines, or build custom tooling.
 
 **Base URL:**
 

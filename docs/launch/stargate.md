@@ -10,7 +10,7 @@ description: Stargate is the public gallery of instant-launch templates for comm
 
 ## Overview
 
-Stargate lists all publicly available [templates](/launch/templates) — pre-configured environment blueprints created by the Playgrounds.dev team and community. Each template includes everything needed to run a complete stack: Docker Compose configuration, service classification, and variable definitions.
+Stargate lists all publicly available [templates](/launch/templates) — pre-configured environment blueprints created by the fibe.gg team and community. Each template includes everything needed to run a complete stack: Docker Compose configuration, service classification, and variable definitions.
 
 ## Browsing Templates
 

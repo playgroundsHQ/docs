@@ -6,7 +6,7 @@ description: Store your personal AI provider credentials and use them across Pla
 
 # Stored Agents
 
-Stored Agents let you **permanently register customized AI provider credentials and configurations** directly in Playgrounds.dev. Once stored, you can:
+Stored Agents let you **permanently register customized AI provider credentials and configurations** directly in fibe.gg. Once stored, you can:
 
 - **Bridge Hub:** Access all your agents and chats from a single, unified interface.
 - **Attach** them to any [Playground](/core-concepts/playground), injecting your configuration into the agent sidecar automatically
@@ -16,7 +16,7 @@ Stored Agents let you **permanently register customized AI provider credentials 
 
 ## Customizing Agents
 
-Agents in Playgrounds.dev are highly configurable. Using the **Agent Configuration Wizard**, you can:
+Agents in fibe.gg are highly configurable. Using the **Agent Configuration Wizard**, you can:
 
 - **Set a Custom Avatar:** Upload custom profile pictures or generate unique SVG robot avatars via Active Storage.
 - **Define System Prompts:** Inject specific instructions or context that your agent should follow across all its interactions.

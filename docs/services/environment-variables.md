@@ -6,7 +6,7 @@ description: How environment variables are layered and merged across defaults, o
 
 # Environment Variables
 
-Playgrounds.dev uses a **three-layer merge system** for environment variables. Understanding this merge order is essential for configuring your services correctly.
+fibe.gg uses a **three-layer merge system** for environment variables. Understanding this merge order is essential for configuring your services correctly.
 
 ## Merge Order
 

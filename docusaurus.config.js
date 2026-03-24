@@ -2,8 +2,8 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Playgrounds.dev Docs',
-  tagline: 'Documentation for Playgrounds.dev',
+  title: 'fibe.gg Docs',
+  tagline: 'Documentation for fibe.gg',
   favicon: 'img/favicon.ico',
 
   headTags: [
@@ -78,7 +78,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        { name: 'description', content: 'Official documentation for Playgrounds.dev — instant cloud environments powered by Docker.' },
+        { name: 'description', content: 'Official documentation for fibe.gg — instant cloud environments powered by Docker.' },
         { name: 'keywords', content: 'fibe.gg, documentation, docs, cloud environments, docker' },
       ],
       colorMode: {
@@ -89,7 +89,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Playgrounds.dev',
+          alt: 'fibe.gg',
           src: 'img/logo.png',
         },
         items: [
@@ -122,7 +122,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `© ${new Date().getFullYear()} Playgrounds.dev — All rights reserved.`,
+        copyright: `© ${new Date().getFullYear()} fibe.gg — All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

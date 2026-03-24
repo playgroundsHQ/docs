@@ -10,7 +10,7 @@ A **Playroom** is a remote Docker host that serves as the infrastructure layer f
 
 ## Overview
 
-When you create a Playroom, you provide SSH credentials to a remote server that has Docker installed. Playgrounds.dev connects to this server over SSH and uses Docker Compose to orchestrate your services. [Traefik](https://traefik.io/) runs on every Playroom as a reverse proxy, handling routing, HTTPS certificates, and authentication.
+When you create a Playroom, you provide SSH credentials to a remote server that has Docker installed. fibe.gg connects to this server over SSH and uses Docker Compose to orchestrate your services. [Traefik](https://traefik.io/) runs on every Playroom as a reverse proxy, handling routing, HTTPS certificates, and authentication.
 
 :::info One Playroom at a Time
 Each Playroom represents a single managed host. A Playroom can run multiple Playgrounds simultaneously, but each Playground lives on exactly one Playroom.
@@ -31,7 +31,7 @@ Each Playroom represents a single managed host. A Playroom can run multiple Play
 
 ## SSH Connection
 
-Playgrounds.dev communicates with your server exclusively over SSH using **ed25519** key pairs.
+fibe.gg communicates with your server exclusively over SSH using **ed25519** key pairs.
 
 ### Key Generation
 

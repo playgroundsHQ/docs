@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
 title: MCP Server
-description: Connect AI agents like Claude, Cursor, and VS Code Copilot to manage Playgrounds.dev via the Model Context Protocol.
+description: Connect AI agents like Claude, Cursor, and VS Code Copilot to manage fibe.gg via the Model Context Protocol.
 ---
 
 # MCP Server
 
-Playgrounds.dev includes a built-in [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server. Any MCP-compatible AI agent or client can connect to the MCP server and manage the entire platform using natural language.
+fibe.gg includes a built-in [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server. Any MCP-compatible AI agent or client can connect to the MCP server and manage the entire platform using natural language.
 
 ## Quick Start
 

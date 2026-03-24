@@ -6,7 +6,7 @@ description: My Fleet is where you create, manage, and publish your own reusable
 
 # My Fleet
 
-**My Fleet** is your personal template management dashboard. It lets you create, version, and publish reusable environment templates that can be shared with your team or the entire Playgrounds.dev community via [Stargate](/launch/stargate).
+**My Fleet** is your personal template management dashboard. It lets you create, version, and publish reusable environment templates that can be shared with your team or the entire fibe.gg community via [Stargate](/launch/stargate).
 
 ## Overview
 

@@ -2,16 +2,16 @@
 slug: /
 sidebar_position: 1
 title: Introduction
-description: Welcome to Playgrounds.dev — instant cloud development environments powered by Docker Compose.
+description: Welcome to fibe.gg — instant cloud development environments powered by Docker Compose.
 ---
 
-# Welcome to Playgrounds.dev
+# Welcome to fibe.gg
 
-Playgrounds.dev gives your team **instant, isolated full-stack cloud environments** powered by Docker Compose. Connect your GitHub repository, define your stack, and launch a live environment — complete with unique subdomains and automatic HTTPS — in seconds.
+fibe.gg gives your team **instant, isolated full-stack cloud environments** powered by Docker Compose. Connect your GitHub repository, define your stack, and launch a live environment — complete with unique subdomains and automatic HTTPS — in seconds.
 
 ## How It Works
 
-Every environment in Playgrounds.dev is built from four core concepts:
+Every environment in fibe.gg is built from four core concepts:
 
 ```
 Playroom → Playzone → Playspec → Playground
