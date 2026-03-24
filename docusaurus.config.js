@@ -122,7 +122,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `© ${new Date().getFullYear()} fibe.gg — All rights reserved.`,
+        copyright: `© ${new Date().getFullYear()} fibe.gg — All rights reserved.<br/><span style="font-size: smaller; opacity: 0.8">built-at ${new Date().toISOString()}</span>`,
       },
       prism: {
         theme: prismThemes.github,
