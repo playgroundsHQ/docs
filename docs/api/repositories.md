@@ -55,7 +55,7 @@ POST /api/repos
 **Example:**
 
 ```bash
-curl -X POST https://my.fibe.gg/api/repos \
+curl -X POST https://fibe.gg/api/repos \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"name": "my-rails-app", "description": "A new Rails app", "private": true}'
@@ -93,7 +93,7 @@ Push one or more files to an existing repository in a single atomic commit.
 **Example:**
 
 ```bash
-curl -X POST https://my.fibe.gg/api/repos/push \
+curl -X POST https://fibe.gg/api/repos/push \
   -H "Authorization: Bearer $API_KEY" \
   -H "Content-Type: application/json" \
   -d '{

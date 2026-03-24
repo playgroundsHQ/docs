@@ -11,7 +11,7 @@ The Playgrounds.dev API is a RESTful JSON API that provides programmatic access 
 **Base URL:**
 
 ```
-https://my.fibe.gg/api
+https://fibe.gg/api
 ```
 
 ## Authentication
@@ -24,7 +24,7 @@ The recommended method for programmatic access. Include your API key in the `Aut
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-  https://my.fibe.gg/api/playrooms
+  https://fibe.gg/api/playrooms
 ```
 
 ### Session-Based
@@ -120,7 +120,7 @@ All error responses follow a consistent format:
 Since the API supports session-based authentication, you can test endpoints directly in your browser while logged in. Simply navigate to an API URL like:
 
 ```
-https://my.fibe.gg/api/playrooms
+https://fibe.gg/api/playrooms
 ```
 
 The response will be JSON. Use the browser's developer tools or a tool like [jq](https://jqlang.github.io/jq/) for formatting.
