@@ -188,9 +188,9 @@ The Debug page provides a comprehensive view of a Playground's internal state â€
 
 Playgrounds include a fully-featured **Web SSH Terminal** directly in the browser. You can securely connect to your Playroom hosts and manage your containers without needing local SSH keys or terminal applications.
 
-## Playground Agent
+## Playground Genie
 
-Playgrounds can optionally include an **AI coding agent** sidecar. When enabled, the agent is deployed alongside your services and is accessible at its own subdomain (`agent-{project}.{domain}`). Agents can be configured via the built-in wizard to use various LLM providers and Custom MCPs.
+Playgrounds can optionally include an **AI coding genie** sidecar. When enabled, the genie is deployed alongside your services and is accessible at its own subdomain (`genie-{project}.{domain}`). Genies can be configured via the built-in wizard to use various LLM providers and Custom MCPs.
 
 ## Playguard
 

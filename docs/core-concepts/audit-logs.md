@@ -6,7 +6,7 @@ description: Track every Playground lifecycle event with a persistent timeline o
 
 # Platform Audit Logs
 
-Audit Logs provide a **persistent timeline** of lifecycle events across the fibe.gg platform — including playgrounds, agents, profiles, and backend resources. 
+Audit Logs provide a **persistent timeline** of lifecycle events across the fibe.gg platform — including playgrounds, genies, profiles, and backend resources. 
 
 ## Overview
 
@@ -21,12 +21,12 @@ Significant events are automatically recorded as an audit log entry. These logs 
 Audit logs are accessible in multiple places depending on the resource context:
 
 1. **Playground detail page** — Click the **"Updated"** badge in the Playground header to see a timeline of recent events for that specific Playground.
-2. **Resource views** — Check the context menu or history tab for specific agents, templates, or playrooms.
+2. **Resource views** — Check the context menu or history tab for specific genies, templates, or playrooms.
 3. **Audit Logs page** — Navigate to **Audit Logs** in the sidebar to see a paginated list of all events across the platform.
 
 ### Playground Audit Logs
 
-You can track changes from a specific playground directly in your public profile timeline. This is enabled in the Agent Settings by selecting a `build_in_public_playground_id`. When configured, every file change or service update in that playground is broadcasted to your public followers.
+You can track changes from a specific playground directly in your public profile timeline. This is enabled in the Genie Settings by selecting a `build_in_public_playground_id`. When configured, every file change or service update in that playground is broadcasted to your public followers.
 
 ## Actor Types
 
@@ -37,7 +37,7 @@ Each log entry records **who** triggered the action:
 | **Player** | An action you performed manually (e.g., creating, recreating, updating) |
 | **System** | An automated platform action (e.g., webhook deliveries, system initialization) |
 | **Playguard** | The background reconciliation process (e.g., drift healing, expiration cleanup) |
-| **Agent** | An action performed by an AI Agent on your behalf via MCP tools |
+| **Genie** | An action performed by an AI Genie on your behalf via MCP tools |
 | **API Key** | An action triggered programmatically using a scoped API Key |
 
 ## Event Categories

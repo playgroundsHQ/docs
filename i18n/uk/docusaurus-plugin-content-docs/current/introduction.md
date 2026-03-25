@@ -47,5 +47,5 @@ Playroom → Playzone → Playspec → Playground
 | Зрозуміти основні концепції | [Основні концепції](/core-concepts/playroom) |
 | Налаштувати сервіси | [Сервіси](/services/overview) |
 | Використати REST API | [API Довідник](/api/overview) |
-| Використати AI агенти зі своїми обліковими даними | [Агенти](/agents/overview) |
+| Використати AI агенти зі своїми обліковими даними | [Агенти](/genies/overview) |
 | Створити шаблон | [Шаблони](/launch/templates) |

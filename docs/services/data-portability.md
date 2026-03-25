@@ -9,7 +9,7 @@ Export your entire fleet or specific entities into a compressed essence.
 1. Navigate to your **Profile**.
 2. Enter the **Advanced Settings**.
 3. Invoke the **Data Portability** ritual.
-4. Select your entities: Playrooms, Playgrounds, Agents, and Secrets.
+4. Select your entities: Playrooms, Playgrounds, Genies, and Secrets.
 5. Choose your notification preference.
 
 The resulting `.jsonl.gz` file contains the blueprint of your digital existence.

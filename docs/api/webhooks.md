@@ -56,17 +56,17 @@ Filter events to specific entity IDs using `event_filters`:
 {
   "webhook_endpoint": {
     "url": "https://your-server.com/webhooks",
-    "events": ["playground.created", "agent.updated"],
+    "events": ["playground.created", "genie.updated"],
     "event_filters": {
       "playground.created": [1, 2, 3],
-      "agent.updated": [10, 20]
+      "genie.updated": [10, 20]
     }
   }
 }
 ```
 
 - `"playground.created": [1, 2, 3]` → fires only for playground IDs 1, 2, 3
-- `"agent.updated": []` or key absent → fires for ALL agents
+- `"genie.updated": []` or key absent → fires for ALL genies
 
 To subscribe to all events, select every event type individually (or use the **Select All** button in the UI).
 
@@ -122,7 +122,7 @@ curl https://your-instance.com/api/webhook_endpoints/1/deliveries \
 | Playroom | `playroom.created`, `playroom.updated`, `playroom.destroyed` |
 | Playzone | `playzone.created`, `playzone.updated`, `playzone.destroyed` |
 | Playspec | `playspec.created`, `playspec.updated`, `playspec.destroyed` |
-| Agent | `agent.created`, `agent.updated`, `agent.destroyed`, `agent.authenticated`, `agent.revoked` |
+| Genie | `genie.created`, `genie.updated`, `genie.destroyed`, `genie.authenticated`, `genie.revoked` |
 | Template | `template.created`, `template.updated`, `template.destroyed` |
 | Artefact | `artefact.created`, `artefact.destroyed` |
 | Feedback | `feedback.created`, `feedback.updated`, `feedback.destroyed` |
@@ -183,7 +183,7 @@ assert hmac.compare_digest(expected, request.headers["X-Webhook-Signature"])
 | `X-Webhook-Signature` | HMAC-SHA256 signature of the payload |
 | `X-Webhook-Event` | Event type (e.g., `playground.created`) |
 | `X-Webhook-Delivery` | Unique delivery ID |
-| `User-Agent` | `Playgrounds-Webhook/1.0` |
+| `User-Genie` | `Playgrounds-Webhook/1.0` |
 
 ## Auto-Disable
 

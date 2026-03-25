@@ -45,8 +45,8 @@ API keys are scoped — they only grant access to what you explicitly allow:
 | `playzones:write` | Create Playzones |
 | `import_templates:read` | Browse and search templates |
 | `import_templates:write` | Create and manage templates |
-| `agents:read` | List and view agents and their data |
-| `agents:write` | Manage agent data |
+| `genies:read` | List and view genies and their data |
+| `genies:write` | Manage genie data |
 | `webhooks:read` | View webhook endpoints and deliveries |
 | `webhooks:write` | Create and update webhook endpoints |
 | `webhooks:delete` | Delete webhook endpoints |
@@ -63,7 +63,7 @@ API keys are scoped — they only grant access to what you explicitly allow:
 
 ## Secret Vault
 
-The Secret Vault allows you to store sensitive credentials securely. This is especially useful for securely providing credentials to AI agents connected via the MCP (Model Context Protocol).
+The Secret Vault allows you to store sensitive credentials securely. This is especially useful for securely providing credentials to AI genies connected via the MCP (Model Context Protocol).
 
 ### Managing Secrets
 
@@ -76,7 +76,7 @@ Secrets are stored as Key-Value pairs with an optional description.
 5. Optionally add a description.
 
 :::important
-Values are encrypted at rest. Be cautious about who or which agents have access to retrieve your secrets. AI agents with the correct MCP tools can retrieve these values automatically.
+Values are encrypted at rest. Be cautious about who or which genies have access to retrieve your secrets. AI genies with the correct MCP tools can retrieve these values automatically.
 :::
 
 ---

@@ -6,7 +6,7 @@ description: How to authenticate each AI provider — Gemini, Claude Code, and O
 
 # Authentication
 
-After creating an agent, it starts in **Pending** status. Click **Authenticate** on the agent detail page to connect your provider account. Each provider type has its own auth flow — you'll use the same credentials you use with your provider's own CLI tools.
+After creating an genie, it starts in **Pending** status. Click **Authenticate** on the genie detail page to connect your provider account. Each provider type has its own auth flow — you'll use the same credentials you use with your provider's own CLI tools.
 
 ## OAuth / JSON Flow
 
@@ -25,7 +25,7 @@ The JSON is validated before storing. Invalid JSON is rejected with a clear erro
 1. Paste your provider's OAuth token or standard token into the text field
 2. Click **Submit**
 
-The token is stored securely in the agent container. All usage runs against your subscription limits.
+The token is stored securely in the genie container. All usage runs against your subscription limits.
 
 ## API Key / Device Code Flow
 
@@ -39,9 +39,9 @@ If the pasted content is valid JSON, it is stored as-is. If it's a raw API key s
 
 | Action | What it does |
 |---|---|
-| **Re-authenticate** | Replace existing credentials with new ones. Available when agent is already authenticated. |
-| **Revoke** | Wipes stored credentials and sets status to `revoked`. Agent becomes unusable but the record remains. |
-| **Delete** | Permanently removes the agent and all associated chat sessions. |
+| **Re-authenticate** | Replace existing credentials with new ones. Available when genie is already authenticated. |
+| **Revoke** | Wipes stored credentials and sets status to `revoked`. Genie becomes unusable but the record remains. |
+| **Delete** | Permanently removes the genie and all associated chat sessions. |
 
 All destructive actions require confirmation.
 
@@ -49,4 +49,4 @@ All destructive actions require confirmation.
 
 - All credential data is **encrypted at rest** via Active Record encryption
 - Maximum credential payload: **64 KB**
-- Revoking an agent wipes the credential data entirely
+- Revoking an genie wipes the credential data entirely
