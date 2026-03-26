@@ -135,7 +135,7 @@ Zero-downtime only applies during **rollouts**. The first Playground creation al
 
 You can **edit a Playspec at any time**, even when Playgrounds are actively running from it. Changes take effect on the next **Rollout** or **Hard Restart** — you do not need to delete and recreate Playgrounds.
 
-The background reconciler (PlayguardJob) runs every ~60 seconds and automatically applies Playspec changes to drifted Playgrounds, so changes can propagate without any manual action.
+The background reconciler runs every ~60 seconds and automatically applies Playspec changes to drifted Playgrounds, so changes can propagate without any manual action.
 
 :::tip
 Only the Playspec **name, description, services, and compose YAML** are relevant for live playgrounds. Mounted files and registry credentials are also immediately usable after the next Rollout.

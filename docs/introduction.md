@@ -2,6 +2,7 @@
 slug: /
 sidebar_position: 1
 title: Introduction
+---
 
 Welcome to the heart of infrastructure. Fibe is the fabric where your ideas take form, manifesting complete, isolated cloud environments in a single breath.
 

@@ -19,7 +19,7 @@ Stored Genies let you **permanently register customized AI provider credentials 
 
 Genies in fibe.gg are highly configurable. Using the **Genie Configuration Wizard**, you can:
 
-- **Set a Custom Avatar:** Upload custom profile pictures or generate unique SVG robot avatars via Active Storage.
+- **Set a Custom Avatar:** Upload custom profile pictures or generate unique SVG robot avatars.
 - **Define System Prompts:** Inject specific instructions or context that your genie should follow across all its interactions.
 - **Attach Skills:** Extend the genie’s capabilities with custom skills tailored for your specific environments.
 - **Integrate Custom MCPs:** Mount your own Model Context Protocol servers to give genies access to your internal tools and data.

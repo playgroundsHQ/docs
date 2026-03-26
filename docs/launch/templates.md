@@ -103,7 +103,7 @@ The latest public version is the one displayed in Stargate. Users can also brows
 
 ## Template Search
 
-Templates are searchable via **full-text search** powered by PostgreSQL's `tsvector` and trigram similarity. Search matches against:
+Templates are searchable via **full-text search** powered by full-text and fuzzy matching. Search matches against:
 
 - Template name
 - Template description

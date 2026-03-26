@@ -20,7 +20,7 @@ The profile page provides a modernized interface with several key capabilities:
 
 Fibe.gg allows you to share your work with the community through Public Profiles and Templates:
 
-1. **Public View**: You can flag your profile as public (`public_profile: true`), exposing your templates to other players.
+1. **Public View**: You can flag your profile as public, exposing your templates to other players.
 2. **Playroom Badges**: See real-time "Playroom Status" badges integrated directly into your header.
 3. **Template Discovery**: Browsing public templates is seamless. Your published works are anchored to your profile, providing attribution and showcasing your setups to potential collaborators or users of the platform.
 
