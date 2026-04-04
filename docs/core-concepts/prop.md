@@ -1,45 +1,61 @@
 ---
 sidebar_position: 2
 title: Prop
-description: A Prop is a connected GitHub repository that provides source code for your environments.
+description: A Prop is a connected Git repository (GitHub or Gitea) that provides source code for your environments.
 ---
 
 # Prop
 
-A **Prop** is a connected GitHub repository. It provides source code that gets mounted into your dynamic services, enabling live editing via your local editor or SSH.
+A **Prop** is a connected Git repository. It provides source code that gets mounted into your dynamic services, enabling live editing via your local editor or SSH.
 
 ## Overview
 
-When you create a Prop, you link a GitHub repository to the platform. The system indexes branches, detects Docker Compose files, and makes the repository available for use in [Playspecs](/core-concepts/playspec).
+When you create a Prop, you link a Git repository to the platform. The system indexes branches, detects Docker Compose files, and makes the repository available for use in [Playspecs](/core-concepts/playspec).
 
-:::info GitHub Only
-fibe.gg currently supports **GitHub** repositories only. Support for other Git providers is planned for the future.
-:::
+fibe.gg supports two Git providers:
+
+| Provider | Usage |
+|----------|-------|
+| **Gitea** (default) | Built-in Git hosting. New repositories are created here by default. |
+| **GitHub** | Import existing repositories from your GitHub account. |
 
 ## Configuration
 
 | Field | Description |
 |-------|-------------|
 | **Name** | A human-readable label for this Prop |
-| **GitHub URL** | The full URL of the repository (e.g., `https://github.com/org/repo`) |
+| **Repository URL** | The full URL of the repository |
+| **Provider** | `gitea` (default) or `github` |
 | **Default Branch** | The branch used by default when creating Playgrounds (e.g., `main`) |
 | **Private** | Whether the repository is private |
-| **Credentials** | Personal Access Token for private repositories (if not using GitHub App) |
+| **Credentials** | Personal Access Token for private GitHub repositories |
 
-## GitHub App Integration
+## Gitea (Default Provider)
 
-The recommended way to connect repositories is through the **fibe.gg GitHub App**. Once installed on your GitHub organization or personal account, the app provides:
+Every fibe.gg account comes with a built-in **Gitea** Git hosting instance. When you sign up:
 
-- **Automatic authentication** — No need to manage Personal Access Tokens
-- **Repository discovery** — Browse and attach repositories directly from the UI
-- **Webhook integration** — Receive push notifications for automatic sync
-- **Fork detection** — The system tracks forked repositories and their parent
+- A Gitea account is automatically provisioned for you
+- You can create new repositories directly from the fibe.gg UI
+- Webhooks are auto-configured for push and pull request events
+- All operations use your personal access token (managed automatically)
 
-To connect a repository via the GitHub App, use the **Attach** action — the platform will discover the repository, determine its default branch, and set up the Prop automatically.
+### Creating a Gitea Repository
 
-### Personal Access Token (Alternative)
+1. Navigate to **Props** in the sidebar
+2. Click **New Prop**
+3. Enter a repository name and optional description
+4. The repository is created on your Gitea instance and linked as a Prop
 
-If you prefer not to install the GitHub App, you can provide a Personal Access Token (PAT) in the **Credentials** field. This is required for private repositories that are not accessible through the GitHub App.
+## GitHub (Import)
+
+You can also import existing repositories from GitHub:
+
+- **GitHub App** (recommended) — Install the fibe.gg GitHub App on your organization for automatic authentication, repository discovery, and webhook integration
+- **Personal Access Token** — Provide a PAT for private repositories not accessible through the GitHub App
+
+### GitHub→Gitea Mirroring
+
+GitHub repositories can optionally be mirrored to your Gitea instance, giving you a local copy of the code on the platform.
 
 ## Branch Management
 
@@ -60,6 +76,14 @@ Each [Marquee](/core-concepts/marquee) checks out a specific branch of the repos
 ## Docker Compose Detection
 
 When a Prop is created or synced, the platform automatically looks for `docker-compose.yml` or `docker-compose.yaml` in the repository root on the default branch. If found, this Compose file is stored on the Prop and can be used as a starting point when creating a [Playspec](/core-concepts/playspec).
+
+## Code Hunks
+
+Props support tracking individual code changes from git commits as **Hunks**:
+
+- Each hunk represents a file change in a single commit (add, modify, delete, rename)
+- Hunks can be ingested, listed, and processed via the [MCP tools](/mcp/overview) or API
+- Useful for AI genies to review and process code changes incrementally
 
 ## Periodic Sync
 

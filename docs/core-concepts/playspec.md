@@ -47,14 +47,14 @@ Each dynamic service requires additional configuration:
 
 | Field | Description | Default |
 |-------|-------------|---------|
-| **Prop** | Which GitHub repository provides the source code | — |
+| **Prop** | Which Git repository (GitHub or Gitea) provides the source code | — |
 | **Dockerfile Path** | Path to the Dockerfile within the repository | `Dockerfile` |
 | **Env File Path** | Path to the `.env.example` file for default environment variables | `.env.example` |
 | **Working Directory** | Container working directory where source code is mounted | `/app` |
 
 ### Static Service Configuration
 
-Static services only require an **image** name (e.g., `postgres:16`, `redis:7`).
+Static services use a pre-built image (e.g., `postgres:16`, `redis:7`). They now support the same runtime toggles as dynamic services — including **Production**, **Expose**, **Internal Only**, and **Zero Downtime** — along with full routing options (subdomain, port, path rules).
 
 ## Service Exposure
 

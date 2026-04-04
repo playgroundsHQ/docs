@@ -28,7 +28,7 @@ Marquee → Prop → Playspec → Playground
 | Concept | What It Is |
 |---------|-----------|
 | [**Marquee**](/core-concepts/marquee) | A remote Docker host where your environments run |
-| [**Prop**](/core-concepts/prop) | A connected GitHub repository that provides source code |
+| [**Prop**](/core-concepts/prop) | A connected Git repository (GitHub or Gitea) that provides source code |
 | [**Playspec**](/core-concepts/playspec) | A blueprint that defines your environment's services and configuration |
 | [**Playground**](/core-concepts/playground) | A live, running instance of a Playspec on a Marquee |
 
@@ -44,7 +44,8 @@ Marquee → Prop → Playspec → Playground
 - **Connect AI genies via MCP** — Use the built-in MCP server to allow any MCP-compatible AI genie to manage your environments
 - **Integrate Custom Genies** — Store generic provider credentials and deploy AI genies alongside your services with Custom MCP support
 - **Genie Features** — Leverage Genie Artefacts (file uploads), Mounted Files, and real-time Genie Activity tracking
-- **Manage GitHub repos** — Create repositories and push files via the Repositories API
+- **Manage Git repos** — Create repositories on GitHub or the built-in Gitea instance via the API
+- **Real-time notifications** — In-app notifications, inbox, and optional browser push notifications
 - **Control access** — Scoped API Keys and Webhook events for secure integrations
 - **Track everything** — Audit Logs record every Playground lifecycle event for debugging and accountability
 - **Publish reusable templates** — Share environment blueprints via Stargate or your own fleet

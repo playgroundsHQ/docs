@@ -38,6 +38,31 @@ Through the Bridge, you can launch genies on any active Marquee without creating
 3. **Extend:** Standalone chats have a default TTL (typically 2 hours). You can extend this or set it to **Never Expire**.
 4. **Purge:** Use the "Purge" action to completely wipe the genie's remote environment and start fresh.
 
+## Inbox & Notifications
+
+The Bridge includes an **Inbox** accessible via the floating action button (FAB) at the bottom of the screen. The FAB has two tabs — **Agents** and **Inbox**:
+
+### Agents Tab
+Lists all your registered genies with quick-access links and active chat status.
+
+### Inbox Tab
+A real-time notification center with two sections:
+
+- **Now**: Recent activity notifications that auto-dismiss after 30 seconds (errors persist for 60 seconds), shown with animated progress bars
+- **Earlier**: Persistent notifications showing past activity with actor icons, action labels, resource links, and timestamps
+- **Unread Badge**: A visual indicator on the FAB showing new notification count
+
+### Mini-Toast Notifications
+Quick crumb notifications appear at the top-center of the page for important events. They auto-dismiss after 4 seconds (errors stay indefinitely).
+
+### Webpush (Browser Push)
+You can optionally subscribe to **browser push notifications** to receive alerts even when the fibe.gg tab is in the background:
+
+- Click the "Subscribe" banner when prompted
+- Notifications appear as system-level alerts
+- Respects your notification preferences — opt out of specific event types
+- On iOS, requires the PWA to be installed to the home screen
+
 ## Genie Mutters (Internal Reasoning)
 
 Modern AI genies often perform complex reasoning before producing a response. The Bridge exposes these "Mutters" (internal thoughts) in a dedicated panel, giving you transparency into the genie's decision-making process.

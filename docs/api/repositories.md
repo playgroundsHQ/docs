@@ -1,15 +1,15 @@
 ---
 sidebar_position: 8
 title: Repositories
-description: API reference for creating GitHub repositories and pushing files via the GitHub App integration.
+description: API reference for creating Git repositories and pushing files via GitHub App or Gitea integration.
 ---
 
 # Repositories API
 
-Create GitHub repositories and push code on behalf of your account via the connected GitHub App installation.
+Create Git repositories and push code on behalf of your account. Supports both **GitHub** (via the GitHub App) and **Gitea** (built-in).
 
-:::note Prerequisite
-All endpoints require the GitHub App to be installed on your account. If the app is not installed, requests return a `422` error with code `GITHUB_APP_REQUIRED`.
+:::note GitHub Endpoints
+The `repos` endpoints below operate on GitHub repositories and require the GitHub App to be installed on your account. For Gitea repositories, use the [Props API](/api/props) or the `create_gitea_repo` MCP tool.
 :::
 
 ## Endpoints

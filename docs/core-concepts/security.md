@@ -181,7 +181,7 @@ API keys are scoped — they only grant access to what you explicitly allow:
 | `webhooks:write` | Create and update webhook endpoints |
 | `webhooks:delete` | Delete webhook endpoints |
 | `mcp:access` | Connect to the MCP server |
-| `repos:write` | Create repositories and push files |
+| `repos:write` | Create repositories (GitHub/Gitea) and push files |
 
 ### Key Lifecycle
 

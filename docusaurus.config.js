@@ -87,11 +87,7 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: '',
-        logo: {
-          alt: 'fibe.gg',
-          src: 'img/logo.png',
-        },
+        title: 'fibe',
         items: [
           {
             href: 'https://fibe.gg',

@@ -122,15 +122,18 @@ All standard [API authentication](/api/overview) rules apply. An API key without
 | `hard_restart_playground` ⚠️ | `playgrounds:write` | Full teardown + re-deploy |
 | `extend_playground` | `playgrounds:write` | Extend the TTL |
 
-### Props (GitHub Repos)
+### Props (Git Repositories)
 
 | Tool | Required Scope | Description |
 |------|-------|-------------|
 | `list_props` | `props:read` | List connected repositories |
 | `get_prop` | `props:read` | Get repository details |
 | `get_prop_branches` | `props:read` | List branches |
-| `create_prop` | `props:write` | Connect a GitHub repository |
+| `create_prop` | `props:write` | Connect a Git repository |
 | `get_github_token` | `props:read` | Get scoped GitHub App token |
+| `get_gitea_token` | `props:read` | Get Gitea personal access token |
+| `create_github_repo` | `props:write` | Create a new GitHub repository |
+| `create_gitea_repo` | `props:write` | Create a new Gitea repository |
 
 ### Launch
 
@@ -157,12 +160,23 @@ All standard [API authentication](/api/overview) rules apply. An API key without
 | `upload_template_image` | `import_templates:write` | Upload a cover image for a template |
 | `fork_template` | `import_templates:write` | Fork a public template into your account |
 
-### Genie Mounted Files
+### Genies
 
 | Tool | Required Scope | Description |
 |------|-------|-------------|
+| `list_agents` | `agents:read` | List all genies for the account |
 | `add_agent_mounted_file` | `agents:write` | Upload and mount a file to a genie |
 | `remove_agent_mounted_file` | `agents:write` | Remove a mounted file from a genie |
+
+### Code Hunks
+
+| Tool | Required Scope | Description |
+|------|-------|-------------|
+| `ingest_hunks` | `props:write` | Ingest commit changes from a repository |
+| `list_hunks` | `props:read` | List indexed code change hunks |
+| `get_hunk` | `props:read` | Get specific hunk details |
+| `next_hunk` | `props:read` | Get next pending hunk for processing |
+| `update_hunk` | `props:write` | Update hunk status |
 
 ### Secrets
 

@@ -22,12 +22,29 @@ Genies in fibe.gg are highly configurable. Using the **Genie Configuration Wizar
 - **Set a Custom Avatar:** Upload custom profile pictures or generate unique SVG robot avatars.
 - **Define System Prompts:** Inject specific instructions or context that your genie should follow across all its interactions.
 - **Attach Skills:** Extend the genie’s capabilities with custom skills tailored for your specific environments.
-- **Integrate Custom MCPs:** Mount your own Model Context Protocol servers to give genies access to your internal tools and data.
+- **Integrate Custom MCPs:** Mount your own Model Context Protocol servers to give genies access to your internal tools and data. Built-in servers (Docker, Fibe-GG, GitHub, Gitea) are always included alongside your custom ones.
 
 | **OAuth / JSON** | Securely paste JSON metadata |
 | **Manual Token** | Standard API token or OAuth token |
 | **Device Code / Key** | Standard `auth.json` or API key |
 | **OpenCode** | Connect to [OpenCode](https://opencode.dev) for self-hosted or open LLM providers |
+
+## Genie Duplication
+
+You can **duplicate** any genie to quickly create a variant with the same configuration:
+
+- Copies name, provider, credentials, settings, and avatar
+- Generates a new authentication password for the clone
+- Available via the **Duplicate** action in the genie dropdown menu
+- Useful for creating project-specific variants of a base genie
+
+## Post-Init Script
+
+Each genie can have a custom **bash script** that runs before the container starts. Use this for installing extra system dependencies, configuring tools, or running setup commands:
+
+- Editable via the **Init Script** button in the genie detail page
+- Runs once per workspace to avoid redundant executions
+- Great for installing language runtimes, CLI tools, or framework dependencies
 
 ## Genie Persistence
 

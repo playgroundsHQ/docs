@@ -108,13 +108,24 @@ Override environment variables at two levels:
 
 See [Environment Variables](/services/environment-variables) for the full merge order.
 
+### Service Toggles
+
+Both dynamic and static services support runtime configuration toggles:
+
+| Toggle | Description |
+|--------|-------------|
+| **Production** | Optimizes resources for production workloads |
+| **Expose** | Makes the service accessible via web routing |
+| **Internal Only** | Requires authentication to access the exposed route |
+| **Zero Downtime** | Deploys new changes without interrupting incoming requests |
+
+See [Production Mode](/services/advanced#production-mode) for details on the Production toggle.
+
 ### Subdomain Overrides
 
 Override the default subdomain for any exposed service. This is essential when running multiple Playgrounds from the same Playspec on the same Marquee — each needs unique subdomains.
 
-### Production Mode
-
-Individual dynamic services can be switched to **Production mode** per Playground. See [Production Mode](/services/advanced#production-mode) for details.
+Subdomains follow a fallback chain: Playground override → Playspec exposure config → Playspec top-level subdomain → service name.
 
 ## Dirty Services
 

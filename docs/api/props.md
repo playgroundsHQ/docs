@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
 title: Props
-description: API reference for managing Props — connected GitHub repositories.
+description: API reference for managing Props — connected Git repositories (GitHub or Gitea).
 ---
 
 # Props API
 
-Manage [Props](/core-concepts/prop) — connected GitHub repositories that provide source code for your environments.
+Manage [Props](/core-concepts/prop) — connected Git repositories (GitHub or Gitea) that provide source code for your environments.
 
 ## Endpoints
 
@@ -38,7 +38,8 @@ GET /api/props
   {
     "id": 1,
     "name": "my-app",
-    "github_url": "https://github.com/org/my-app",
+    "repository_url": "https://github.com/org/my-app",
+    "provider": "github",
     "private": false,
     "default_branch": "main",
     "status": "active",
@@ -75,13 +76,13 @@ Attach a repository discovered through the GitHub App integration. If the Prop a
 POST /api/props
 ```
 
-**Request body:**
+**Request body (GitHub):**
 
 ```json
 {
   "prop": {
     "name": "my-app",
-    "github_url": "https://github.com/org/my-app",
+    "repository_url": "https://github.com/org/my-app",
     "default_branch": "main",
     "private": true,
     "credentials": "ghp_your_personal_access_token"
@@ -89,9 +90,21 @@ POST /api/props
 }
 ```
 
-:::note Private Repositories
-Private repositories require either a Personal Access Token in the `credentials` field or an active GitHub App installation.
+:::note Private GitHub Repositories
+Private GitHub repositories require either a Personal Access Token in the `credentials` field or an active GitHub App installation.
 :::
+
+**Request body (Gitea — default):**
+
+```json
+{
+  "prop": {
+    "name": "my-app"
+  }
+}
+```
+
+When no `repository_url` is specified, the platform creates a new repository on your built-in Gitea instance.
 
 ---
 
@@ -158,7 +171,7 @@ Returns the parsed key-value pairs from the `.env.example` file on the specified
 POST /api/props/:id/sync
 ```
 
-Triggers an asynchronous sync — refreshes the branch index and Docker Compose file from GitHub.
+Triggers an asynchronous sync — refreshes the branch index and Docker Compose file from the Git provider.
 
 ```json
 {

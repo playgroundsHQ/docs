@@ -34,8 +34,18 @@ Use the special subdomain `@` to route the **root domain** itself to a service:
 
 ### Subdomain Defaults and Overrides
 
-- **Default subdomain** is defined on the [Playspec](/core-concepts/playspec) (typically the service name)
-- **Subdomain overrides** can be set per [Playground](/core-concepts/playground), which is essential when multiple Playgrounds share the same Marquee
+Subdomains follow a fallback chain:
+
+1. **Playground override** — Set per Playground (highest priority)
+2. **Playspec exposure config** — Defined in the Playspec's service exposure settings
+3. **Playspec top-level subdomain** — The Playspec's default subdomain for the service
+4. **Service name** — Falls back to the Docker Compose service name
+
+Subdomain overrides are essential when multiple Playgrounds share the same Marquee.
+
+### Path-Based Routing
+
+In addition to subdomain routing, services support optional **path rules** for Traefik-based path routing. This allows multiple services to share a subdomain by routing on different URL paths (e.g., `PathPrefix(/api)`).
 
 :::warning Subdomain Conflicts
 Two Playgrounds on the same Marquee cannot use the same subdomain. Always override subdomains when running multiple Playgrounds from the same Playspec on a single Marquee.
